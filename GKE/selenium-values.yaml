@@ -1,0 +1,11 @@
+hub:
+  service:
+    type: LoadBalancer
+    annotations:
+      cloud.google.com/load-balancer-type: "Internal"
+chrome:
+  node:
+    replicas: 2
+firefox:
+  node:
+    replicas: 1
