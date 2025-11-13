@@ -1,3 +1,4 @@
 .env
 *.env
 /GKE/.env
+GKE/.env

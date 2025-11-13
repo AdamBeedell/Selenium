@@ -1,0 +1,17 @@
+gcloud container clusters create $CLUSTER_NAME \
+    --project=$PROJECT_ID \
+    --region=$GKE_REGION \
+    --network=$VPC_NAME \
+    --subnetwork=$SUBNET_NAME \
+    --enable-private-nodes \
+    --enable-ip-alias \
+    --master-authorized-networks=84.65.93.224/32 \
+    --enable-master-authorized-networks \
+    --master-ipv4-cidr=172.16.0.0/28 \
+    --enable-private-endpoint \
+    --no-enable-public-endpoint
+    --num-nodes=2 \
+    --machine-type=$MACHINE_TYPE \
+    --enable-autoscaling \
+    --min-nodes=1 \
+    --max-nodes=5
